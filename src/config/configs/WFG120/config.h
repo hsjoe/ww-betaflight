@@ -53,13 +53,13 @@
 #define GYRO_1_SPI_INSTANCE SPI1
 #define GYRO_1_CS_PIN        PB2
 #define GYRO_1_EXTI_PIN      PA4
-#define GYRO_1_ALIGN         CW270_DEG
+#define GYRO_1_ALIGN         CW180_DEG_FLIP
 #define ENSURE_MPU_DATA_READY_IS_LOW
 
 #define GYRO_2_SPI_INSTANCE SPI2
 #define GYRO_2_CS_PIN        PB12
 #define GYRO_2_EXTI_PIN      PD10
-#define GYRO_2_ALIGN         CW270_DEG
+#define GYRO_2_ALIGN         CW180_DEG_FLIP
 #define ENSURE_MPU_DATA_READY_IS_LOW
 
 // ---------- Baro / Mag (I2C1) ----------
@@ -160,6 +160,8 @@
 // ADC
 #define ADC_VBAT_PIN         PC0
 #define ADC_CURR_PIN         PC1
+#define ADC1_DMA_OPT        8
+#define ADC3_DMA_OPT        9
 //#define ADC_RSSI_PIN         PB1
 
 // PINIO
@@ -196,6 +198,7 @@
 
 #define DEFAULT_CURRENT_METER_SOURCE CURRENT_METER_ADC
 #define DEFAULT_VOLTAGE_METER_SOURCE VOLTAGE_METER_ADC
+#define DEFAULT_VOLTAGE_METER_SCALE_DEFAULT  110
 #define DEFAULT_CURRENT_METER_SCALE  250
 
 #define DEFAULT_DSHOT_BURST DSHOT_DMAR_OFF  // 禁用DMA DSHOT
